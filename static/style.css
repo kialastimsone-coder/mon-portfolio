@@ -24,6 +24,73 @@ body {
   min-height: 100vh;
 }
 
+html {
+scroll-behavior: smooth;
+}
+
+#loader {
+position: fixed;
+inset: 0;
+background: black;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 99999;
+
+transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.loader-hidden {
+opacity: 0;
+visibility: hidden;
+}
+
+.spinner {
+width: 60px;
+height: 60px;
+border: 5px solid rgba(255,255,255,0.2);
+border-top: 5px solid orange;
+border-radius: 50%;
+animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+100% {
+transform: rotate(360deg);
+}
+}
+
+.loader-content{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:20px;
+}
+
+.loader-logo{
+color:white;
+font-size:40px;
+font-weight:bold;
+}
+
+.loader-logo span{
+color:orange;
+}
+
+#topBtn {
+position: fixed;
+bottom: 30px;
+left: 30px;
+display: none;
+background: orange;
+color: white;
+border: none;
+padding: 10px;
+border-radius: 50%;
+cursor: pointer;
+z-index: 999;
+}
+
 /* ===== ENTETE / NAVIGATION ===== */
 .entete {
   display: flex;
@@ -170,7 +237,7 @@ p {
 }
 
 button {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   background-color: transparent;
   color: white;
@@ -242,6 +309,17 @@ button:hover {
     left: 27%;
     top: 10%;
   }
+}
+
+.download-msg {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #28a745;
+color: white;
+padding: 12px 20px;
+border-radius: 6px;
+z-index: 9999;
 }
 
 /* ===== TEXTE ANIMÉ (typed.js) ===== */
@@ -703,7 +781,7 @@ form .btn2{
   }
 
   button {
-     font-size: 11px;
+     font-size: 9px;
     }
 
   .btn{
