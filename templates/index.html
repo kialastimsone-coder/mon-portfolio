@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ingénieur en génie électrique et développeur web. Spécialiste en énergies
+    renouvelables, conception de systèmes et solutions digitales.">
     <title>{% block title %}StimLink@{% endblock %}</title>
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     <script src="https://kit.fontawesome.com/c58d18ca53.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<!-- LOADER -->
+<div id="loader">
+   <div class="loader-content">
+      <h1 class="loader-logo">Stim<span>Link</span></h1>
+      <div class="spinner"></div>
+   </div>
+</div>
 <div class="container">
     <header class="entete">
         <div class="logo"><span>S</span>timsone<span>.</span></div>
@@ -33,22 +42,22 @@
             <p>Ingénieur en Génie électrique | Spécialiste aux énergies renouvelables | Informaticien | Programmeur en
                 Python et développeur Web HTML & CSS | Rédacteur | Spécialiste en Gestion des projets | Entrepreneur</p>
             <div class="btn2">
-                <a href="{{ url_for('static', filename='CV SIVI KIALA STIMSONE.pdf') }}" download>
-                  <button>Télécharger CV</button>
+                <a href="{{ url_for('static', filename='CV Stimsone Ingénieur.pdf') }}" download>
+                  <button><i class="fas fa-download"></i> Télécharger CV</button>
                 </a>
-                <a href="{{ url_for('static', filename='SIVI Stimsone.JPG')}}" download>
-                  <button>Télécharger ma photo</button>
+                <a href="{{ url_for('static', filename='arrière_plan_sivi2.jpg')}}" download>
+                  <button><i class="fas fa-download"></i> Télécharger ma photo</button>
                 </a>
             </div>
         </div>
         <div class="cdroite">
             <div class="groupImg">
-                <img src="{{ url_for('static', filename='arrière_plan_sivi2.jpg') }}" width="500" alt="Photo de présentation">
+                <img src="{{ url_for('static', filename='ingénieur Stimsone.png') }}" width="500" height="500" alt="Photo de présentation">
             </div>
         </div>
     </div>
 </div>
-
+<button id="topBtn">↑</button>
 <!-- ===== SECTION COMPETENCES ===== -->
 <div id="competences">
     <div class="container">
@@ -201,7 +210,6 @@
                     <h3>Installation électrique bâtiment</h3>
                     <p>Donnez-nous la charge de réaliser vos rêves, en nous confiant vos projets d'installation
                         électrique bâtiment, dans le délai convenable et dans les normes internationales</p>
-                    <a href="#"><img src="static/address-card.png" width="30"></a>
                 </div>
             </div>
             <div class="service">
@@ -212,7 +220,6 @@
                         l'indépendance énergétique. Optimisez votre installation solaire, et assurer une longévité
                         de vos équipements en nous confiant le dimensionnement professionnel et stricte de votre
                         projet d'installation des panneaux solaire.</p>
-                    <a href="#"><img src="static/address-card.png" width="30"></a>
                 </div>
             </div>
             <div class="service">
@@ -225,7 +232,6 @@
                         du système. Faites appel aux experts pour maximiser la sécurité de personnes et de vos
                         équipements.
                     </p>
-                    <a href="#"><img src="static/address-card.png" width="30"></a>
                 </div>
             </div>
             <div class="service">
@@ -235,7 +241,6 @@
                     <p>Vos tâches quotidiennes seront désormais facilitées grâce à l'application des gesions personnalisé
                         de votre business (boutique, établissement, etc.). Gagner du temps et assurer le suivi
                         régulier de vos opérations.</p>
-                    <a href="#"><img src="static/address-card.png" width="30"></a>
                 </div>
             </div>
             <div class="service">
@@ -244,7 +249,6 @@
                     <h3>Développement des sites web responsive</h3>
                     <p>Quelles que soient vos activités, votre entreprise, nous mettrons à votre disposition un site web
                         responsive sur mesure pour répondre à vos attentes.</p>
-                    <a href="#"><img src="static/address-card.png" width="30"></a>
                 </div>
             </div>
             <div class="service">
@@ -254,7 +258,6 @@
                     <p>Nous produisons par jour de millions de tera des données, les analysées pour tirer des
                         conclusions permettent de rentabiliser et de maximiser la fiabilité d'une décision.
                     Vos données peuvent vous aider à prédire les futures opérations, valeurs, ventes, achats...</p>
-                    <a href="#"><img src="static/address-card.png" width="30"></a>
                 </div>
             </div>
             <div class="service">
@@ -264,7 +267,6 @@
                     <p>Aujourd'hui, grâce à l'IA les entreprises réussissent à toucher à l'endroit qu'il faut
                     et au moment nécessaire. Vous pouvez nous confier cette mission de vous développer un ou plusieurs
                         modèles de l'IA (Machine Learning) afin de maximiser vos revenus.</p>
-                    <a href="#"><img src="static/address-card.png" width="30"></a>
                 </div>
             </div>
             <div class="service">
@@ -275,7 +277,6 @@
                     ne parviennent pas à créer un environnement de confiance et d'assurance. Un projet bien évaluer
                     en avance peut aider le bailleur de fond à economiser énormement et à instaurer un environnement
                     d'assurance et de confiance.</p>
-                    <a href="#"><img src="static/address-card.png" width="30"></a>
                 </div>
             </div>
         </div>
@@ -374,7 +375,7 @@
                     <input type="text" name="Name" placeholder="Votre noms" required>
                     <input type="email" name="email" placeholder="Adresse e-mail" required>
                     <textarea name="Message" rows="6" placeholder="Dites-nous, en quoi pourrions-nous vous aider ?"></textarea>
-                    <button type="submit" class="btn">Envoyer</button>
+                    <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Envoyer</button>
                 </form>
             </div>
         </div>
@@ -446,42 +447,59 @@ tabLinks.forEach((tab, i) => {
   });
 </script>
 <script>
- document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+ .then(response => {
+if (response.status === "success") {
 
-  const form = e.target;
-  const data = {
-    nom: form.nom.value,
-    email: form.email.value,
-    message: form.message.value
-  };
+const msg = document.getElementById("successMsg");
+msg.textContent = "✔ Message envoyé avec succès !";
+msg.style.display = "block";
 
-  fetch(
-  "https://script.google.com/macros/s/AKfycbz0JfQ2DahVgOJKe-ffQ3FthQVb7Gu8DuyCSLv5Pkq9uXzKVdNf7xm4PViuoK414GZ58g/exec", {
-    method: "POST",
-    body: JSON.stringify(data),
-    headers: {
-      "Content-Type": "application/json"
-    }
-  })
-  .then(res => res.json())
-  .then(response => {
-    if (response.status === "success") {
-      // Afficher le message
-      const msg = document.getElementById("successMsg");
-      msg.style.display = "block";
+setTimeout(() => msg.style.display = "none", 5000);
+form.reset();
 
-      // Masquer après 5s
-      setTimeout(() => {
-        msg.style.display = "none";
-      }, 5000);
-
-      // Réinitialiser le formulaire
-      form.reset();
-    }
-  })
-  .catch(err => console.error("Erreur:", err));
+} else {
+alert("Erreur lors de l'envoi.");
+}
+})
+.catch(() => {
+alert("Impossible d'envoyer le message. Vérifiez votre connexion.");
 });
+</script>
+<script>
+window.addEventListener("load", () => {
+setTimeout(() => {
+const loader = document.getElementById("loader");
+loader.classList.add("loader-hidden");
+}, 1500); // durée minimale du loader (1.5 sec)
+});
+</script>
+<script>
+// Téléchargement message
+document.querySelectorAll('a[download]').forEach(link => {
+link.addEventListener('click', function () {
+
+const fileName = this.getAttribute('href').split('/').pop();
+
+const msg = document.createElement('div');
+msg.className = 'download-msg';
+msg.textContent = `✔ Merci d’avoir téléchargé "${fileName}"`;
+
+document.body.appendChild(msg);
+
+setTimeout(() => msg.remove(), 4000);
+});
+});
+</script>
+<script>
+const topBtn = document.getElementById("topBtn");
+
+window.onscroll = () => {
+    topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+};
+
+topBtn.onclick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
 </script>
 <main>
 {% block content %}{% endblock %}
